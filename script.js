@@ -1,15 +1,4 @@
-import {
-	THREE,
-	renderer,
-	document,
-	scene,
-	camera,
-	composer,
-	circle,
-	skelet,
-	particle,
-} from "./unsure_scripts.js";
-
+import * as THREE from "three";
 var renderer, scene, camera, composer, circle, skelet, particle;
 
 window.onload = function () {
@@ -49,8 +38,11 @@ function init() {
 	var geom2 = new THREE.IcosahedronGeometry(15, 1);
 
 	var material = new THREE.MeshPhongMaterial({
-		color: 0xffffff,
-		shading: THREE.FlatShading,
+		flatShading: true,
+		uniforms: {
+			time: { value: 1.0 },
+			resolution: { value: new THREE.Vector2() },
+		},
 	});
 
 	for (var i = 0; i < 1000; i++) {
@@ -64,8 +56,11 @@ function init() {
 	}
 
 	var mat = new THREE.MeshPhongMaterial({
-		color: 0xffffff,
-		shading: THREE.FlatShading,
+		flatShading: true,
+		uniforms: {
+			time: { value: 1.0 },
+			resolution: { value: new THREE.Vector2() },
+		},
 	});
 
 	var mat2 = new THREE.MeshPhongMaterial({
