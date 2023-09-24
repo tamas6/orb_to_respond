@@ -77,15 +77,15 @@ function init() {
 	planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
 	skelet.add(planet2);
 
-	var ambientLight = new THREE.AmbientLight(0x999999);
+	var ambientLight = new THREE.AmbientLight(0xf7f8fa);
 	scene.add(ambientLight);
 
 	var lights = [];
 	lights[0] = new THREE.DirectionalLight(0xffffff, 1);
 	lights[0].position.set(1, 0, 0);
-	lights[1] = new THREE.DirectionalLight(0x11e8bb, 1);
+	lights[1] = new THREE.DirectionalLight(0x7b61ff, 1);
 	lights[1].position.set(0.75, 1, 0.5);
-	lights[2] = new THREE.DirectionalLight(0x8200c9, 1);
+	lights[2] = new THREE.DirectionalLight(0xf7f8fa, 1);
 	lights[2].position.set(-0.75, -1, 0.5);
 	scene.add(lights[0]);
 	scene.add(lights[1]);
